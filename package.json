@@ -10,35 +10,49 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@databuddy/sdk": "^2.4.20",
-    "@radix-ui/react-slot": "^1.2.5",
+    "@databuddy/sdk": "^2.6.0",
+    "@radix-ui/react-slot": "^1.3.3",
     "@squircle-js/react": "^1.3.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "figma-squircle": "^1.1.0",
     "flubber": "^0.4.2",
-    "lucide-react": "^1.20.0",
-    "motion": "^12.40.0",
+    "lucide-react": "^1.27.0",
+    "motion": "^12.43.0",
     "next": "^16.2.12",
     "next-themes": "^0.4.6",
     "prism-react-renderer": "^2.4.1",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
     "react-use-measure": "^2.1.7",
     "tailwind-merge": "^3.6.0",
     "vaul": "^1.1.2"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/flubber": "^0.4.0",
-    "@types/node": "^20",
+    "@types/node": "^26.1.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^10.8.0",
-    "eslint-config-next": "^0.2.4",
-    "prettier": "3.8.4",
+    "eslint-config-next": "^16.2.12",
+    "prettier": "3.9.6",
     "shadcn": "^4.16.0",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "tailwindcss": "^4.3.3",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "typescript7": "npm:typescript@^7.0.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "eslint-plugin-import@>=2": "npm:eslint-plugin-import@latest",
+      "eslint-plugin-react@>=7": "npm:eslint-plugin-react@latest",
+      "eslint-plugin-jsx-a11y@>=6": "npm:eslint-plugin-jsx-a11y@latest"
+    },
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@emnapi/core",
+        "@emnapi/runtime"
+      ]
+    }
   }
 }
