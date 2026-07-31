@@ -1,0 +1,161 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "arise-ui",
+  "homepage": "https://github.com/amitgajare2/ariseui",
+  "items": [
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "title": "Utils",
+      "description": "The cn helper for merging Tailwind classes.",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "lib/utils.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "bounce-sidebar",
+      "type": "registry:ui",
+      "title": "Bounce Sidebar",
+      "description": "A vertical navigation list with a bouncy, spring-animated active indicator.",
+      "dependencies": ["motion"],
+      "registryDependencies": ["amitgajare2/ariseui/utils"],
+      "files": [
+        {
+          "path": "components/ui/bounce-sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "family-drawer",
+      "type": "registry:ui",
+      "title": "Family Drawer",
+      "description": "A drawer that opens from the right side of the screen, with a family tree structure inside. It supports color and size (sm/md/lg) props.",
+      "dependencies": ["motion", "vaul"],
+      "registryDependencies": ["amitgajare2/ariseui/utils"],
+      "files": [
+        {
+          "path": "components/ui/family-drawer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "proximity-sidebar",
+      "type": "registry:ui",
+      "title": "Proximity Sidebar",
+      "description": "A dash-style scroll sidebar whose items expand as the pointer approaches.",
+      "dependencies": ["motion"],
+      "registryDependencies": ["amitgajare2/ariseui/utils"],
+      "files": [
+        {
+          "path": "components/ui/proximity-sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scroll-progress",
+      "type": "registry:ui",
+      "title": "Scroll Progress",
+      "description": "A scroll progress pill that tracks reading position and expands into a squircle menu of sections you can jump to.",
+      "dependencies": ["motion"],
+      "registryDependencies": ["amitgajare2/ariseui/utils"],
+      "files": [
+        {
+          "path": "components/ui/scroll-progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "code-block",
+      "type": "registry:ui",
+      "title": "Code Block",
+      "description": "A clean code block that builds its entire theme from a single accent color. Pass code and a hex, it does the rest.",
+      "dependencies": ["motion", "prism-react-renderer", "lucide-react"],
+      "registryDependencies": ["amitgajare2/ariseui/utils"],
+      "files": [
+        {
+          "path": "components/ui/code-block.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "otp-input",
+      "type": "registry:ui",
+      "title": "OTP Input",
+      "description": "A one-time-code input whose characters roll into place behind a caret that slides from slot to slot.",
+      "dependencies": ["motion"],
+      "registryDependencies": ["amitgajare2/ariseui/utils"],
+      "files": [
+        {
+          "path": "components/ui/otp-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "text-scramble",
+      "type": "registry:ui",
+      "title": "Text Scramble",
+      "description": "A text element that scrambles its content before revealing the final text.",
+      "dependencies": ["motion"],
+      "registryDependencies": ["amitgajare2/ariseui/utils"],
+      "files": [
+        {
+          "path": "components/ui/text-scramble.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+     {
+      "name": "magnetic-dock",
+      "type": "registry:ui",
+      "title": "Magnetic Dock",
+      "description": "A dock that responds to cursor movement with a magnetic effect.",
+      "dependencies": ["motion"],
+      "registryDependencies": ["amitgajare2/ariseui/utils"],
+      "files": [
+        {
+          "path": "components/ui/magnetic-dock.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+     {
+      "name": "flickering-grid",
+      "type": "registry:ui",
+      "title": "Flickering Grid",
+      "description": "A grid that flickers with a subtle animation.",
+      "dependencies": ["motion"],
+      "registryDependencies": ["amitgajare2/ariseui/utils"],
+      "files": [
+        {
+          "path": "components/ui/flickering-grid.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "youtube-embed",
+      "type": "registry:ui",
+      "title": "Youtube Embed",
+      "description": "A component to embed YouTube videos with customizable options.",
+      "dependencies": [],
+      "registryDependencies": ["amitgajare2/ariseui/utils"],
+      "files": [
+        {
+          "path": "components/ui/youtube-embed.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+
+  ]
+}
