@@ -148,7 +148,7 @@
   --font-sans: var(--font-inter), Inter, sans-serif;
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-serif);
-  --font-cal: "Cal Sans", var(--font-sans), sans-serif;
+  --font-cal: var(--font-cal-sans), "Cal Sans", var(--font-sans), sans-serif;
   --font-runde: var(--font-open-runde), sans-serif;
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -170,8 +170,19 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .font-cal {
+    font-family: var(--font-cal);
+  }
+
+  .font-runde {
+    font-family: var(--font-runde);
   }
 }
 
@@ -184,6 +195,7 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

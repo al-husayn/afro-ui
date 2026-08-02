@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Geist_Mono, Cal_Sans } from 'next/font/google';
+import { Inter, Geist_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Databuddy } from '@databuddy/sdk/react';
@@ -17,10 +17,12 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-const calSans = Cal_Sans({
+const calSans = localFont({
+  src: '../public/fonts/CalSans-SemiBold.woff2',
   variable: '--font-cal-sans',
-  subsets: ['latin'],
-  weight: '400',
+  weight: '600',
+  style: 'normal',
+  display: 'swap',
 });
 
 const openRunde = localFont({
