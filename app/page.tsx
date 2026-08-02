@@ -50,8 +50,8 @@ export default async function Home() {
   );
 }
 
-const X_URL = 'https://x.com/AmitGajare4';
-const GITHUB_URL = 'https://github.com/amitgajare2/ariseui';
+const X_URL = 'https://x.com/al_drake3';
+const GITHUB_URL = 'https://github.com/al-husayn/afro-ui';
 
 function DemoSection() {
   return (
