@@ -42,9 +42,9 @@ and after this now verify
 
 npm run registry:build
 
-npx shadcn@latest registry validate amitgajare2/ariseui
+npx shadcn@latest registry validate al-husayn/afro-ui
 
-npx shadcn@latest view amitgajare2/ariseui/flickering-grid
+npx shadcn@latest view al-husayn/afro-ui/flickering-grid
 
 npm run build
 

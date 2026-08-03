@@ -3,12 +3,8 @@
   "name": "bounce-sidebar",
   "title": "Bounce Sidebar",
   "description": "A vertical navigation list with a bouncy, spring-animated active indicator.",
-  "dependencies": [
-    "motion"
-  ],
-  "registryDependencies": [
-    "amitgajare2/ariseui/utils"
-  ],
+  "dependencies": ["motion"],
+  "registryDependencies": ["al-husayn/afro-ui/utils"],
   "files": [
     {
       "path": "components/ui/bounce-sidebar.tsx",

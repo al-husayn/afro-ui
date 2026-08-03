@@ -4,9 +4,7 @@
   "title": "Youtube Embed",
   "description": "A component to embed YouTube videos with customizable options.",
   "dependencies": [],
-  "registryDependencies": [
-    "amitgajare2/ariseui/utils"
-  ],
+  "registryDependencies": ["al-husayn/afro-ui/utils"],
   "files": [
     {
       "path": "components/ui/youtube-embed.tsx",

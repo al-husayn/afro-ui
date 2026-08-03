@@ -3,12 +3,8 @@
   "name": "flickering-grid",
   "title": "Flickering Grid",
   "description": "A grid that flickers with a subtle animation.",
-  "dependencies": [
-    "motion"
-  ],
-  "registryDependencies": [
-    "amitgajare2/ariseui/utils"
-  ],
+  "dependencies": ["motion"],
+  "registryDependencies": ["al-husayn/afro-ui/utils"],
   "files": [
     {
       "path": "components/ui/flickering-grid.tsx",

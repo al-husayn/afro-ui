@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   description: 'A shadcn registry of best animated React components.',
   keywords: SITE_KEYWORDS,
   icons: {
-    icon: [{ url: '/logos/AriseUI.svg', type: 'image/svg+xml' }],
+    icon: [{ url: '/logos/afro-ui.svg', type: 'image/svg+xml' }],
   },
   openGraph: {
     title: 'Afro UI',

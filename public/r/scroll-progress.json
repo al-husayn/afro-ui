@@ -3,12 +3,8 @@
   "name": "scroll-progress",
   "title": "Scroll Progress",
   "description": "A scroll progress pill that tracks reading position and expands into a squircle menu of sections you can jump to.",
-  "dependencies": [
-    "motion"
-  ],
-  "registryDependencies": [
-    "amitgajare2/ariseui/utils"
-  ],
+  "dependencies": ["motion"],
+  "registryDependencies": ["al-husayn/afro-ui/utils"],
   "files": [
     {
       "path": "components/ui/scroll-progress.tsx",

@@ -31,8 +31,8 @@ export type ComponentItem = {
   credits?: string[];
 };
 
-export const REGISTRY_HOMEPAGE = 'https://github.com/amitgajare2/ariseui';
-export const REGISTRY_REPO = 'amitgajare2/ariseui';
+export const REGISTRY_HOMEPAGE = 'https://github.com/al-husayn/afro-ui';
+export const REGISTRY_REPO = 'al-husayn/afro-ui';
 
 export const DOC_PAGES = [
   '/components/introduction',

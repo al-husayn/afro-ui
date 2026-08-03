@@ -4,7 +4,7 @@
   "title": "Code Block",
   "description": "A clean code block that builds its entire theme from a single accent color. Pass code and a hex, it does the rest.",
   "dependencies": ["motion", "prism-react-renderer", "lucide-react"],
-  "registryDependencies": ["amitgajare2/ariseui/utils"],
+  "registryDependencies": ["al-husayn/afro-ui/utils"],
   "files": [
     {
       "path": "components/ui/code-block.tsx",

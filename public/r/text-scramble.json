@@ -3,12 +3,8 @@
   "name": "text-scramble",
   "title": "Text Scramble",
   "description": "A text element that scrambles its content before revealing the final text.",
-  "dependencies": [
-    "motion"
-  ],
-  "registryDependencies": [
-    "amitgajare2/ariseui/utils"
-  ],
+  "dependencies": ["motion"],
+  "registryDependencies": ["al-husayn/afro-ui/utils"],
   "files": [
     {
       "path": "components/ui/text-scramble.tsx",

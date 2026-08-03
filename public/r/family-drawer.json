@@ -3,13 +3,8 @@
   "name": "family-drawer",
   "title": "Family Drawer",
   "description": "A drawer that opens from the right side of the screen, with a family tree structure inside. It supports color and size (sm/md/lg) props.",
-  "dependencies": [
-    "motion",
-    "vaul"
-  ],
-  "registryDependencies": [
-    "amitgajare2/ariseui/utils"
-  ],
+  "dependencies": ["motion", "vaul"],
+  "registryDependencies": ["al-husayn/afro-ui/utils"],
   "files": [
     {
       "path": "components/ui/family-drawer.tsx",

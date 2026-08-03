@@ -30,7 +30,7 @@ export function GET() {
     'Install any component into a React / Next.js project:',
     '',
     '```',
-    'npx shadcn add amitgajare2/ariseui/<component-name>',
+    'npx shadcn add al-husayn/afro-ui/<component-name>',
     '```',
     '',
     `Source code for all components: ${REGISTRY_HOMEPAGE}`,

@@ -3,12 +3,8 @@
   "name": "magnetic-dock",
   "title": "Magnetic Dock",
   "description": "A dock that responds to cursor movement with a magnetic effect.",
-  "dependencies": [
-    "motion"
-  ],
-  "registryDependencies": [
-    "amitgajare2/ariseui/utils"
-  ],
+  "dependencies": ["motion"],
+  "registryDependencies": ["al-husayn/afro-ui/utils"],
   "files": [
     {
       "path": "components/ui/magnetic-dock.tsx",

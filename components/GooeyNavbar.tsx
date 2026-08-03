@@ -12,7 +12,7 @@ const LINKS = [
   { label: 'Components', href: '/components' },
 ];
 
-const GITHUB_URL = 'https://github.com/amitgajare2/ariseui';
+const GITHUB_URL = 'https://github.com/al-husayn/afro-ui';
 
 const GithubIcon = ({ className }: { className?: string }) => (
   <svg
@@ -111,7 +111,7 @@ export default function GooeyNavbar({ stars }: { stars?: number | null }) {
           <Link
             href='/'
             className={cn(pill, 'flex h-12 items-center gap-2 px-4')}>
-            <img src='/logos/AriseUI.svg' alt='' className='h-5 w-5' />
+            <img src='/logos/afro-ui.svg' alt='' className='h-5 w-5' />
             <span className='font-runde text-md font-semibold text-white'>
               Afro UI
             </span>

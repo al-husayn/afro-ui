@@ -3,12 +3,8 @@
   "name": "proximity-sidebar",
   "title": "Proximity Sidebar",
   "description": "A dash-style scroll sidebar whose items expand as the pointer approaches.",
-  "dependencies": [
-    "motion"
-  ],
-  "registryDependencies": [
-    "amitgajare2/ariseui/utils"
-  ],
+  "dependencies": ["motion"],
+  "registryDependencies": ["al-husayn/afro-ui/utils"],
   "files": [
     {
       "path": "components/ui/proximity-sidebar.tsx",

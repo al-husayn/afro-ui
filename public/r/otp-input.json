@@ -3,12 +3,8 @@
   "name": "otp-input",
   "title": "OTP Input",
   "description": "A one-time-code input whose characters roll into place behind a caret that slides from slot to slot.",
-  "dependencies": [
-    "motion"
-  ],
-  "registryDependencies": [
-    "amitgajare2/ariseui/utils"
-  ],
+  "dependencies": ["motion"],
+  "registryDependencies": ["al-husayn/afro-ui/utils"],
   "files": [
     {
       "path": "components/ui/otp-input.tsx",

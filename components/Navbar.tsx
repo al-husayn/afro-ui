@@ -12,7 +12,7 @@ const LINKS = [
   { label: 'Sponsors', href: '/#sponsors' },
 ];
 
-const GITHUB_URL = 'https://github.com/amitgajare2/ariseui';
+const GITHUB_URL = 'https://github.com/al-husayn/afro-ui';
 
 const GithubIcon = ({ className }: { className?: string }) => (
   <svg
@@ -68,7 +68,7 @@ export default function Navbar() {
             pill,
             'gap-2 px-4 font-[family-name:var(--font-open-runde)] text-sm font-semibold text-foreground',
           )}>
-          <img src='/logos/AriseUI.svg' alt='' className='h-5 w-5' />
+          <img src='/logos/afro-ui.svg' alt='' className='h-5 w-5' />
           Afro UI
         </Link>
 
