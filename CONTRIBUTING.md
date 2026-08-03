@@ -3,7 +3,7 @@
 Afro UI is a [shadcn registry](https://ui.shadcn.com/docs/registry). Every component in this repo can be installed into any project with a single command:
 
 ```bash
-npx shadcn@latest add amitgajare2/ariseui/<component-name>
+npx shadcn@latest add al-husayn/afro-ui/<component-name>
 ```
 
 This guide walks through adding a new component, from the first file to a working install command.
@@ -65,7 +65,7 @@ Add an entry to the `items` array in `registry.json` at the repo root. This is w
   "type": "registry:ui",
   "title": "Glow Badge",
   "description": "A badge with a soft glow.",
-  "registryDependencies": ["amitgajare2/ariseui/utils"],
+  "registryDependencies": ["al-husayn/afro-ui/utils"],
   "files": [
     {
       "path": "components/ui/glow-badge.tsx",
@@ -77,14 +77,14 @@ Add an entry to the `items` array in `registry.json` at the repo root. This is w
 
 Field reference:
 
-| Field                   | What it does                                                                                                                                                                                             |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`                  | The install name: `npx shadcn amitgajare2/ariseui/glow-badge`                                                                                                                                            |
-| `title` / `description` | Shown in `shadcn search` and `shadcn view`                                                                                                                                                               |
-| `dependencies`          | npm packages your component imports (e.g. `"framer-motion"`). The CLI installs them in the consumer's project automatically.                                                                             |
-| `registryDependencies`  | Other registry items your component imports, as full addresses. Almost always includes `amitgajare2/ariseui/utils` (for `cn`). If your component renders our `Button`, add `amitgajare2/ariseui/button`. |
-| `files`                 | The files that ship with the item. Multi-file components (component + hook) just add more entries.                                                                                                       |
-| `css`                   | Extra CSS to inject into the consumer's stylesheet — used for keyframes. See the `shimmer-button` item in `registry.json` for an example.                                                                |
+| Field                   | What it does                                                                                                                                                                                         |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`                  | The install name: `npx shadcn al-husayn/afro-ui/glow-badge`                                                                                                                                          |
+| `title` / `description` | Shown in `shadcn search` and `shadcn view`                                                                                                                                                           |
+| `dependencies`          | npm packages your component imports (e.g. `"framer-motion"`). The CLI installs them in the consumer's project automatically.                                                                         |
+| `registryDependencies`  | Other registry items your component imports, as full addresses. Almost always includes `al-husayn/afro-ui/utils` (for `cn`). If your component renders our `Button`, add `al-husayn/afro-ui/button`. |
+| `files`                 | The files that ship with the item. Multi-file components (component + hook) just add more entries.                                                                                                   |
+| `css`                   | Extra CSS to inject into the consumer's stylesheet — used for keyframes. See the `shimmer-button` item in `registry.json` for an example.                                                            |
 
 **Important:** if your component needs custom keyframes or CSS that isn't a Tailwind utility, you must do both:
 
@@ -124,7 +124,7 @@ git push
 The GitHub repository **is** the registry — there is no separate publish step. As soon as the commit is on the default branch, the component is installable:
 
 ```bash
-npx shadcn@latest add amitgajare2/ariseui/glow-badge
+npx shadcn@latest add al-husayn/afro-ui/glow-badge
 ```
 
 ## Step 6: Verify the install
@@ -133,13 +133,13 @@ Confirm the live registry resolves:
 
 ```bash
 # validate the whole registry
-npx shadcn@latest registry validate amitgajare2/ariseui
+npx shadcn@latest registry validate al-husayn/afro-ui
 
 # inspect the item payload the CLI will deliver
-npx shadcn@latest view amitgajare2/ariseui/glow-badge
+npx shadcn@latest view al-husayn/afro-ui/glow-badge
 
 # dry-run an install in any other project
-npx shadcn@latest add amitgajare2/ariseui/glow-badge --dry-run
+npx shadcn@latest add al-husayn/afro-ui/glow-badge --dry-run
 ```
 
 ## Checklist
