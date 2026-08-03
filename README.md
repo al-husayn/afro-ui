@@ -40,7 +40,7 @@ A growing **shadcn/ui registry** featuring premium-quality components designed f
 •
 [Docs](https://afro-ui.vercel.app/components/introduction)
 •
-[Twitter/X](https://x.com/AmitGajare4)
+[Twitter/X](https://x.com/al_drake3)
 
 </div>
 
@@ -100,5 +100,5 @@ Issues, ideas, and pull requests are welcome. If you want to add a component or 
 <div align="center">
   <br />
   <img src="public/logos/afro-ui.svg" alt="" width="28" />
-  <p><sub>Built by <a href="https://x.com/AmitGajare4">@al_drake3</a></sub></p>
+  <p><sub>Built by <a href="https://x.com/al_drake3">@al_drake3</a></sub></p>
 </div>

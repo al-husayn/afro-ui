@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const GITHUB_URL = 'https://github.com/al-husayn/afro-ui';
-const X_URL = 'https://x.com/AmitGajare4';
+const X_URL = 'https://x.com/al_drake3';
 
 const SOCIALS = [
   { label: 'GitHub', href: GITHUB_URL },
