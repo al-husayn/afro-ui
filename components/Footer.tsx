@@ -36,7 +36,7 @@ export default function Footer() {
         style={{ cornerShape: 'squircle' } as React.CSSProperties}>
         {/* logo pops out over the top edge of the card */}
         <img
-          src='/logos/afro-ui.svg'
+          src='/logos/AfroUI.svg'
           alt='Afro UI logo'
           className='absolute left-1/2 top-0 h-20 w-20 -translate-x-1/2 -translate-y-1/2 sm:h-28 sm:w-28 md:h-36 md:w-36'
         />

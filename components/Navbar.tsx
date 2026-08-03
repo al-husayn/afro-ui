@@ -68,7 +68,7 @@ export default function Navbar() {
             pill,
             'gap-2 px-4 font-[family-name:var(--font-open-runde)] text-sm font-semibold text-foreground',
           )}>
-          <img src='/logos/afro-ui.svg' alt='' className='h-5 w-5' />
+          <img src='/logos/AfroUI.svg' alt='Afro UI' className='h-5 w-5' />
           Afro UI
         </Link>
 
