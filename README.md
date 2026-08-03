@@ -57,7 +57,7 @@ Afro UI is a shadcn registry built with Next.js, Tailwind CSS, and TypeScript. E
 Install a component from the registry with the shadcn CLI:
 
 ```bash
-npx shadcn add al-husayn/afro-ui/bounce-sidebar
+pnpm dlx shadcn add al-husayn/afro-ui/bounce-sidebar
 ```
 
 You can replace `bounce-sidebar` with any available component name from the registry.
@@ -69,8 +69,8 @@ If you are new to Git or Next.js, follow these steps in order:
 ```bash
 git clone https://github.com/al-husayn/afro-ui.git
 cd afro-ui
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 Then open http://localhost:3000 in your browser.
@@ -88,7 +88,7 @@ Then open http://localhost:3000 in your browser.
 Before opening a pull request, run:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 This command runs the registry build and the Next.js production build, then regenerates the public registry files.
@@ -100,5 +100,5 @@ Issues, ideas, and pull requests are welcome. If you want to add a component or 
 <div align="center">
   <br />
   <img src="public/logos/afro-ui.svg" alt="" width="28" />
-  <p><sub>Built by <a href="https://x.com/AmitGajare4">@AmitGajare4</a></sub></p>
+  <p><sub>Built by <a href="https://x.com/AmitGajare4">@al_drake3</a></sub></p>
 </div>
