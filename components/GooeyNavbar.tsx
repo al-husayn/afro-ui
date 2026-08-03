@@ -111,7 +111,7 @@ export default function GooeyNavbar({ stars }: { stars?: number | null }) {
           <Link
             href='/'
             className={cn(pill, 'flex h-12 items-center gap-2 px-4')}>
-            <img src='/logos/afro-ui.svg' alt='' className='h-5 w-5' />
+            <img src='/logos/AfroUI.svg' alt='' className='h-5 w-5' />
             <span className='font-runde text-md font-semibold text-white'>
               Afro UI
             </span>
