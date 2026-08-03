@@ -1,4 +1,4 @@
-<!-- <a href="https://ariseui.com">
+<!-- <a href="https://afro-ui.com">
   <img src="public/assets/landing/readme-hero.png" alt="Afro UI" width="100%" />
 </a> -->
 
@@ -11,14 +11,14 @@
 A growing **shadcn/ui registry** featuring premium-quality components designed for modern web applications.
 
 <p>
-  <a href="https://ariseui.vercel.app">
-    <img src="https://img.shields.io/badge/Website-ariseui.vercel.app-fcd601?style=for-the-badge&labelColor=0a0a0a" />
+  <a href="https://afro-ui.vercel.app">
+    <img src="https://img.shields.io/badge/Website-afro-ui.vercel.app-fcd601?style=for-the-badge&labelColor=0a0a0a" />
   </a>
-  <a href="https://github.com/amitgajare2/ariseui">
-    <img src="https://img.shields.io/github/stars/amitgajare2/ariseui?style=for-the-badge&labelColor=0a0a0a" />
+  <a href="https://github.com/al-husayn/afro-ui">
+    <img src="https://img.shields.io/github/stars/al-husayn/afro-ui?style=for-the-badge&labelColor=0a0a0a" />
   </a>
-  <a href="https://github.com/amitgajare2/ariseui/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/amitgajare2/ariseui?style=for-the-badge&labelColor=0a0a0a" />
+  <a href="https://github.com/al-husayn/afro-ui/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/al-husayn/afro-ui?style=for-the-badge&labelColor=0a0a0a" />
   </a>
 </p>
 
@@ -34,11 +34,11 @@ A growing **shadcn/ui registry** featuring premium-quality components designed f
 
 ### 🌐 Links
 
-[Website](https://ariseui.vercel.app)
+[Website](https://afro-ui.vercel.app)
 •
-[Components](https://ariseui.vercel.app/components)
+[Components](https://afro-ui.vercel.app/components)
 •
-[Docs](https://ariseui.vercel.app/components/introduction)
+[Docs](https://afro-ui.vercel.app/components/introduction)
 •
 [Twitter/X](https://x.com/AmitGajare4)
 
@@ -57,7 +57,7 @@ Afro UI is a shadcn registry built with Next.js, Tailwind CSS, and TypeScript. E
 Install a component from the registry with the shadcn CLI:
 
 ```bash
-npx shadcn add amitgajare2/ariseui/bounce-sidebar
+npx shadcn add al-husayn/afro-ui/bounce-sidebar
 ```
 
 You can replace `bounce-sidebar` with any available component name from the registry.
@@ -67,8 +67,8 @@ You can replace `bounce-sidebar` with any available component name from the regi
 If you are new to Git or Next.js, follow these steps in order:
 
 ```bash
-git clone https://github.com/amitgajare2/ariseui.git
-cd ariseui
+git clone https://github.com/al-husayn/afro-ui.git
+cd afro-ui
 npm install
 npm run dev
 ```
@@ -99,6 +99,6 @@ Issues, ideas, and pull requests are welcome. If you want to add a component or 
 
 <div align="center">
   <br />
-  <img src="public/logos/AriseUI.svg" alt="" width="28" />
+  <img src="public/logos/afro-ui.svg" alt="" width="28" />
   <p><sub>Built by <a href="https://x.com/AmitGajare4">@AmitGajare4</a></sub></p>
 </div>
