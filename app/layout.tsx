@@ -95,7 +95,7 @@ export default function RootLayout({
       lang='en'
       suppressHydrationWarning
       className={`${inter.variable} ${geistMono.variable} ${openRunde.variable} ${calSans.variable} h-full antialiased`}>
-      <body className='min-h-full flex flex-col'>
+      <body suppressHydrationWarning className='min-h-full flex flex-col'>
         <ThemeProvider
           attribute='class'
           defaultTheme='dark'

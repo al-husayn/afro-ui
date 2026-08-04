@@ -1,6 +1,13 @@
 'use client';
 
-import { useMemo, useRef, useState, useEffect, type ReactNode } from 'react';
+import {
+  useMemo,
+  useRef,
+  useState,
+  useEffect,
+  useLayoutEffect,
+  type ReactNode,
+} from 'react';
 
 type SetView = (view: string) => void;
 import { Drawer } from 'vaul';
@@ -13,6 +20,7 @@ export default function FamilyDrawer() {
   const [view, setView] = useState('default');
   const [elementRef, bounds] = useMeasure();
   const previousHeightRef = useRef<number | null>(null);
+  const [mounted, setMounted] = useState(false);
 
   const content = useMemo(() => {
     switch (view) {
@@ -29,10 +37,9 @@ export default function FamilyDrawer() {
 
   const [opacityDuration, setOpacityDuration] = useState<number>(0.15);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const MIN_DURATION = 0.15;
     const MAX_DURATION = 0.27;
-
     if (previousHeightRef.current == null) {
       previousHeightRef.current = bounds.height;
       setOpacityDuration(MIN_DURATION);
@@ -52,6 +59,10 @@ export default function FamilyDrawer() {
     setOpacityDuration(duration);
   }, [bounds.height]);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <>
       <button
@@ -69,31 +80,54 @@ export default function FamilyDrawer() {
           <Drawer.Content
             asChild
             className='fixed inset-x-4 bottom-4 z-[60] mx-auto max-w-[361px] overflow-hidden rounded-[36px] bg-[#FEFFFE] outline-hidden md:mx-auto md:w-full dark:bg-popover'>
-            <motion.div animate={{ height: bounds.height }}>
-              <Drawer.Close asChild>
-                <button
-                  data-vaul-no-drag=''
-                  className='focus-visible:shadow-focus-ring-button absolute top-7 right-8 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[#F7F8F9] text-[#949595] transition-transform focus:scale-95 active:scale-75 dark:bg-secondary dark:text-muted-foreground'>
-                  <CloseIcon />
-                </button>
-              </Drawer.Close>
-              <AnimatePresence mode='popLayout'>
-                <motion.div
-                  key={view}
-                  transition={{
-                    duration: opacityDuration,
-                    ease: [0.26, 0.08, 0.25, 1],
-                  }}
-                  initial={{ opacity: 0, scale: 0.96 }}
-                  exit={{ opacity: 0, scale: 0.96 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  ref={elementRef}
-                  className='px-6 pt-2.5 pb-12 antialiased'
-                  style={{ fontFamily: 'var(--font-open-runde)' }}>
-                  {content}
-                </motion.div>
-              </AnimatePresence>
-            </motion.div>
+            {mounted ? (
+              <motion.div animate={{ height: bounds.height }}>
+                <Drawer.Close asChild>
+                  <button
+                    data-vaul-no-drag=''
+                    className='focus-visible:shadow-focus-ring-button absolute top-7 right-8 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[#F7F8F9] text-[#949595] transition-transform focus:scale-95 active:scale-75 dark:bg-secondary dark:text-muted-foreground'>
+                    <CloseIcon />
+                  </button>
+                </Drawer.Close>
+
+                <AnimatePresence mode='popLayout'>
+                  <motion.div
+                    key={view}
+                    transition={{
+                      duration: opacityDuration,
+                      ease: [0.26, 0.08, 0.25, 1],
+                    }}
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    exit={{ opacity: 0, scale: 0.96 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    ref={elementRef}
+                    className='px-6 pt-2.5 pb-12 antialiased'
+                    style={{ fontFamily: 'var(--font-open-runde)' }}>
+                    {content}
+                  </motion.div>
+                </AnimatePresence>
+              </motion.div>
+            ) : (
+              <div style={{ height: bounds.height }}>
+                <Drawer.Close asChild>
+                  <button
+                    data-vaul-no-drag=''
+                    className='focus-visible:shadow-focus-ring-button absolute top-7 right-8 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[#F7F8F9] text-[#949595] transition-transform focus:scale-95 active:scale-75 dark:bg-secondary dark:text-muted-foreground'>
+                    <CloseIcon />
+                  </button>
+                </Drawer.Close>
+
+                <AnimatePresence mode='popLayout'>
+                  <div
+                    key={view}
+                    ref={elementRef}
+                    className='px-6 pt-2.5 pb-12 antialiased'
+                    style={{ fontFamily: 'var(--font-open-runde)' }}>
+                    {content}
+                  </div>
+                </AnimatePresence>
+              </div>
+            )}
           </Drawer.Content>
         </Drawer.Portal>
       </Drawer.Root>

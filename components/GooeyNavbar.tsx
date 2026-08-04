@@ -165,7 +165,7 @@ export default function GooeyNavbar({ stars }: { stars?: number | null }) {
                 animate={{
                   scale: starHovered ? 0.25 : 1,
                   opacity: starHovered ? 0 : 1,
-                  rotate: reduceMotion ? 0 : starHovered ? -60 : 0,
+                  rotate: 0,
                   filter: starHovered ? 'blur(4px)' : 'blur(0px)',
                 }}
                 transition={reduceMotion ? { duration: 0 } : morphTransition}
@@ -177,7 +177,7 @@ export default function GooeyNavbar({ stars }: { stars?: number | null }) {
                 animate={{
                   scale: starHovered ? 1 : 0.25,
                   opacity: starHovered ? 1 : 0,
-                  rotate: reduceMotion ? 0 : starHovered ? 0 : -150,
+                  rotate: 0,
                   filter: starHovered ? 'blur(0px)' : 'blur(4px)',
                 }}
                 transition={
@@ -195,7 +195,7 @@ export default function GooeyNavbar({ stars }: { stars?: number | null }) {
                 animate={{
                   scale: starHovered && !reduceMotion ? 1 : 0,
                   opacity: starHovered ? 1 : 0,
-                  rotate: reduceMotion ? 0 : starHovered ? 0 : -90,
+                  rotate: 0,
                 }}
                 transition={
                   reduceMotion
@@ -216,7 +216,7 @@ export default function GooeyNavbar({ stars }: { stars?: number | null }) {
                 animate={{
                   scale: starHovered && !reduceMotion ? 1 : 0,
                   opacity: starHovered ? 1 : 0,
-                  rotate: reduceMotion ? 0 : starHovered ? 0 : 90,
+                  rotate: 0,
                 }}
                 transition={
                   reduceMotion
