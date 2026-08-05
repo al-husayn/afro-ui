@@ -48,7 +48,7 @@ export const PANEL_INFO = {
     'Click the code icon in the top-right corner to view the source code.',
   keepInMind:
     "Most components here are recreations of great work from around the web. I don't claim to be the original creator - this is my attempt to reverse-engineer, replicate, and often add a few extra features. I've tried to credit everyone; if I missed someone, let me know.",
-  contactEmail: 'syntaxamit@proton.me',
+  contactEmail: 'alhusayn532@gmail.com',
   contactNote: 'Found a bug or issue? Feel free to drop a DM.',
   license: [
     'Free to use and modify in both personal and commercial projects.',

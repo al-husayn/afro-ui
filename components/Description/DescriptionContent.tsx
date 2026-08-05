@@ -123,12 +123,12 @@ export default function DescriptionContent({
                 className="size-8 hover:text-foreground"
               />
             </Tooltip>
-            <Tooltip label="@amitgajare4">
+            <Tooltip label="@al_drake3">
               <a
-                href="https://x.com/amitgajare4"
+                href="https://x.com/al_drake3"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="X — @amitgajare4"
+                aria-label="X — @al_drake3"
                 className="inline-flex size-8 items-center justify-center text-foreground/60 transition-colors hover:text-foreground"
               >
                 <XIcon className="size-5" />
