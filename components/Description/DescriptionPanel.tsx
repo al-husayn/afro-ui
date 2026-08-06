@@ -23,7 +23,6 @@ export function DescriptionPanel({ open, setOpen }: DescriptionPanelProps) {
 
   const [codeOpen, setCodeOpen] = useState(false);
 
-
   const toggleCode = () => {
     if (codeOpen) {
       setCodeOpen(false);
