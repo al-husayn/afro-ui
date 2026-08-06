@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 type DependencyPillProps = {
@@ -11,7 +12,14 @@ export default function DependencyPill({ name, icon }: DependencyPillProps) {
       {icon != null && icon !== "" && (
         <span className="flex h-5 w-5 items-center justify-center">
           {typeof icon === "string" ? (
-            <img src={icon} alt="" className="h-5 w-5" />
+            <Image
+              src={icon}
+              alt=""
+              width={20}
+              height={20}
+              unoptimized={/^https?:\/\//.test(icon)}
+              className="h-5 w-5 object-contain"
+            />
           ) : (
             icon
           )}

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const GITHUB_URL = 'https://github.com/al-husayn/afro-ui';
@@ -6,11 +7,6 @@ const X_URL = 'https://x.com/al_drake3';
 const SOCIALS = [
   { label: 'GitHub', href: GITHUB_URL },
   { label: 'X / Twitter', href: X_URL },
-];
-
-const EXPLORE = [
-  { label: 'Components', href: '/components' },
-  // { label: "Sponsors", href: "/#sponsors" },
 ];
 
 const ArrowIcon = () => (
@@ -35,9 +31,11 @@ export default function Footer() {
         className='relative w-full overflow-visible rounded-t-[45px] bg-neutral-950 px-6 pb-10 pt-20 sm:pt-28 text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08)] sm:px-12'
         style={{ cornerShape: 'squircle' } as React.CSSProperties}>
         {/* logo pops out over the top edge of the card */}
-        <img
+        <Image
           src='/logos/AfroUI.svg'
           alt='Afro UI logo'
+          width={144}
+          height={144}
           className='absolute left-1/2 top-0 h-20 w-20 -translate-x-1/2 -translate-y-1/2 sm:h-28 sm:w-28 md:h-36 md:w-36'
         />
 

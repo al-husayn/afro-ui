@@ -1,6 +1,7 @@
 'use client';
 
 import { Fragment, useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
@@ -111,7 +112,7 @@ export default function GooeyNavbar({ stars }: { stars?: number | null }) {
           <Link
             href='/'
             className={cn(pill, 'flex h-12 items-center gap-2 px-4')}>
-            <img src='/logos/AfroUI.svg' alt='' className='h-5 w-5' />
+            <Image src='/logos/AfroUI.svg' alt='' width={20} height={20} className='h-5 w-5' />
             <span className='font-runde text-md font-semibold text-white'>
               Afro UI
             </span>

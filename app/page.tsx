@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import GooeyNavbar from '@/components/GooeyNavbar';
 import { fetchStarCount } from '@/lib/github';
 import HeroCta from '@/components/HeroCta';
@@ -19,11 +20,14 @@ export default async function Home() {
     <>
       <section className='relative w-full p-1.5 md:p-2.5'>
         <HeroWrapper>
-          <img
+          <Image
             src='/assets/landing/herobg.webp'
-            alt=''
+            alt='Hero Background'
             aria-hidden='true'
-            className='pointer-events-none absolute inset-0 size-full rounded-[inherit]'
+            fill
+            priority
+            sizes='100vw'
+            className='pointer-events-none absolute inset-0 size-full rounded-[inherit] object-cover'
           />
           <div className='pointer-events-none absolute inset-0 rounded-[inherit] bg-linear-to-t from-background from-6% to-transparent' />
           <div className='relative mx-auto flex w-full max-w-6xl flex-col items-center gap-3 px-4 pb-12 pt-24 text-center sm:gap-4 sm:px-6 md:pb-16'>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { AnimatePresence, motion } from 'motion/react';
@@ -68,7 +69,13 @@ export default function Navbar() {
             pill,
             'gap-2 px-4 font-[family-name:var(--font-open-runde)] text-sm font-semibold text-foreground',
           )}>
-          <img src='/logos/AfroUI.svg' alt='Afro UI' className='h-5 w-5' />
+          <Image
+            src='/logos/AfroUI.svg'
+            alt='Afro UI'
+            width={20}
+            height={20}
+            className='h-5 w-5'
+          />
           Afro UI
         </Link>
 
