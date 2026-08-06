@@ -67,7 +67,7 @@ export default function Navbar() {
           href='/'
           className={cn(
             pill,
-            'gap-2 px-4 font-[family-name:var(--font-open-runde)] text-sm font-semibold text-foreground',
+            'gap-2 px-4 font-(family-name:--font-open-runde) text-sm font-semibold text-foreground',
           )}>
           <Image
             src='/logos/AfroUI.svg'
@@ -121,11 +121,11 @@ export default function Navbar() {
                       }}
                       className={cn(
                         'absolute inset-0 rounded-full',
-                        'bg-black/[0.05] dark:bg-white/[0.08]',
+                        'bg-black/5 dark:bg-white/8',
                         'shadow-[inset_0_1px_0_0_rgba(255,255,255,0.55),inset_0_-1px_2px_0_rgba(0,0,0,0.05)]',
                         'dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.14),inset_0_-1px_2px_0_rgba(0,0,0,0.3)]',
                         pressed &&
-                          'bg-black/[0.08] backdrop-blur-sm dark:bg-white/[0.12]',
+                          'bg-black/8 backdrop-blur-sm dark:bg-white/',
                       )}
                     />
                   )}

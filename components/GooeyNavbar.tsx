@@ -95,7 +95,7 @@ export default function GooeyNavbar({ stars }: { stars?: number | null }) {
   const animateLayout = !reduceMotion;
 
   return (
-    <div className='pointer-events-none fixed inset-x-0 top-5 md:top-4 z-50 flex justify-center px-5  sm:px-6 md:top-7.5'>
+    <div className='pointer-events-none fixed inset-x-0 top-5 z-50 flex justify-center px-5 sm:px-6 md:top-4'>
       <motion.nav
         layout={animateLayout}
         transition={spring}
@@ -112,7 +112,13 @@ export default function GooeyNavbar({ stars }: { stars?: number | null }) {
           <Link
             href='/'
             className={cn(pill, 'flex h-12 items-center gap-2 px-4')}>
-            <Image src='/logos/AfroUI.svg' alt='' width={20} height={20} className='h-5 w-5' />
+            <Image
+              src='/logos/AfroUI.svg'
+              alt=''
+              width={20}
+              height={20}
+              className='h-5 w-5'
+            />
             <span className='font-runde text-md font-semibold text-white'>
               Afro UI
             </span>

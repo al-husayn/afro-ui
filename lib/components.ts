@@ -559,7 +559,7 @@ export function Demo() {
 
   export function Demo() {
     return <FlickeringGrid
-        className="absolute inset-0 z-0 [mask-image:radial-gradient(450px_circle_at_center,white,transparent)]"
+        className="absolute inset-0 z-0 mask-[radial-gradient(450px_circle_at_center,white,transparent)]"
         squareSize={4}
         gridGap={6}
         color="var(--foreground)"
