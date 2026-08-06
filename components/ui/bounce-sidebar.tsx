@@ -37,12 +37,11 @@ export function BounceSidebar({
   const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
   const prevY = useRef<number | null>(null);
 
-  const [dotSize, setDotSize] = useState(6);
+  const [dotSize] = useState(() => {
+    const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
+    return Math.round(6 * dpr) / dpr;
+  });
   const [ready, setReady] = useState(false);
-  useEffect(() => {
-    const dpr = window.devicePixelRatio || 1;
-    setDotSize(Math.round(6 * dpr) / dpr);
-  }, []);
 
   useIsomorphicLayoutEffect(() => {
     let cancelled = false;

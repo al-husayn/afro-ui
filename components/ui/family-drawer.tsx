@@ -4,7 +4,6 @@ import {
   useMemo,
   useRef,
   useState,
-  useEffect,
   useLayoutEffect,
   type ReactNode,
 } from 'react';
@@ -20,7 +19,7 @@ export default function FamilyDrawer() {
   const [view, setView] = useState('default');
   const [elementRef, bounds] = useMeasure();
   const previousHeightRef = useRef<number | null>(null);
-  const [mounted, setMounted] = useState(false);
+  const [mounted] = useState(true);
 
   const content = useMemo(() => {
     switch (view) {
@@ -58,10 +57,6 @@ export default function FamilyDrawer() {
 
     setOpacityDuration(duration);
   }, [bounds.height]);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <>

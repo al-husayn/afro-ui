@@ -20,13 +20,17 @@ export default function CodeDrawer({ open, onClose, item }: CodeDrawerProps) {
   useEffect(() => {
     if (!open || !item?.registry) return;
     let cancelled = false;
-    setLoading(true);
-    setCode(null);
+    // defer setting state to avoid synchronous setState inside effect (prevents cascading renders)
+    const unblock = setTimeout(() => {
+      setLoading(true);
+      setCode(null);
+    }, 0);
     fetchSource(item.registry)
       .then((text) => !cancelled && setCode(text))
       .finally(() => !cancelled && setLoading(false));
     return () => {
       cancelled = true;
+      clearTimeout(unblock);
     };
   }, [open, item?.registry]);
 
