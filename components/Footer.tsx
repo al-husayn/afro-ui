@@ -28,7 +28,7 @@ export default function Footer() {
   return (
     <footer className='relative w-full p-2.5 pt-20'>
       <div
-        className='relative w-full overflow-visible rounded-t-[45px] border border-white/10 bg-[radial-gradient(circle_at_top,_rgba(52,211,153,0.16),_transparent_45%),_linear-gradient(135deg,_#07120d_0%,_#0f1a13_100%)] px-6 pb-10 pt-20 text-white shadow-[0_30px_80px_-30px_rgba(3,20,12,0.75)] sm:px-12 sm:pt-28'
+        className='relative w-full overflow-visible rounded-t-[45px] border border-primary/15 px-6 pb-10 pt-20 text-foreground shadow-[0_30px_80px_-30px_rgba(22,101,52,0.2)] sm:px-12 sm:pt-28 dark:border-white/10 dark:bg-[radial-gradient(circle_at_top,rgba(52,211,153,0.16),transparent_45%),linear-gradient(135deg,#07120d_0%,#0f1a13_100%)]'
         style={{ cornerShape: 'squircle' } as React.CSSProperties}>
         {/* logo pops out over the top edge of the card */}
         <Image
@@ -41,7 +41,7 @@ export default function Footer() {
 
         <div className='mx-auto grid w-full max-w-6xl grid-cols-1 items-start gap-6 md:grid-cols-[1fr_auto_1fr] md:items-start'>
           <div className='order-2 flex flex-row flex-wrap gap-3 md:flex-col md:order-1 md:pt-4 md:items-start text-left'>
-            <span className='mb-1 font-runde text-lg font-bold tracking-tight text-white'>
+            <span className='mb-1 font-runde text-lg font-bold tracking-tight text-foreground dark:text-white'>
               Follow along
             </span>
             {SOCIALS.map((social) => (
@@ -50,7 +50,7 @@ export default function Footer() {
                 href={social.href}
                 target='_blank'
                 rel='noreferrer'
-                className='group inline-flex w-fit items-center gap-2 text-sm font-medium text-white/60 transition-colors duration-150 ease-out hover:text-white sm:text-base'>
+                className='group inline-flex w-fit items-center gap-2 text-sm font-medium text-foreground/70 transition-colors duration-150 ease-out hover:text-foreground dark:text-white/60 dark:hover:text-white sm:text-base'>
                 {social.label}
                 <ArrowIcon />
               </a>
@@ -61,7 +61,7 @@ export default function Footer() {
             <h2 className='font-runde text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl'>
               Afro UI
             </h2>
-            <p className='max-w-xl text-balance text-sm font-medium text-white/70 sm:text-lg'>
+            <p className='max-w-xl text-balance text-sm font-medium text-foreground/70 dark:text-white/70 sm:text-lg'>
               A growing library of copy-paste React, Next.js, and Tailwind CSS
               UI components for modern teams building across Africa and beyond.
             </p>
@@ -75,7 +75,7 @@ export default function Footer() {
                 href={GITHUB_URL}
                 target='_blank'
                 rel='noreferrer'
-                className='flex h-10 sm:h-12 items-center rounded-full border border-white/10 bg-white/8 px-4 sm:px-6 text-sm font-semibold text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.14),inset_0_-1px_2px_0_rgba(0,0,0,0.3)] backdrop-blur-2xl transition-colors duration-150 ease-out hover:bg-white/12'>
+                className='flex h-10 sm:h-12 items-center rounded-full border border-primary/15 bg-white/70 px-4 sm:px-6 text-sm font-semibold text-foreground shadow-[inset_0_1px_0_0_rgba(255,255,255,0.45),inset_0_-1px_2px_0_rgba(0,0,0,0.06)] backdrop-blur-2xl transition-colors duration-150 ease-out hover:bg-white dark:border-white/10 dark:bg-white/8 dark:text-white dark:hover:bg-white/12'>
                 Star on GitHub
               </a>
             </div>
@@ -100,21 +100,23 @@ export default function Footer() {
           <div className='flex items-center gap-2.5'>
             <a
               href='/sitemap.xml'
-              className='text-xs font-medium text-white/50 transition-colors duration-150 ease-out hover:text-white'>
+              className='text-xs font-medium text-foreground/60 transition-colors duration-150 ease-out hover:text-foreground dark:text-white/50 dark:hover:text-white'>
               Sitemap
             </a>
-            <span aria-hidden='true' className='text-xs text-white/25'>
+            <span
+              aria-hidden='true'
+              className='text-xs text-foreground/40 dark:text-white/25'>
               &middot;
             </span>
             <a
               href='/robots.txt'
-              className='text-xs font-medium text-white/50 transition-colors duration-150 ease-out hover:text-white'>
+              className='text-xs font-medium text-foreground/60 transition-colors duration-150 ease-out hover:text-foreground dark:text-white/50 dark:hover:text-white'>
               robots.txt
             </a>
           </div>
 
           <div className='flex items-center'>
-            <span className='text-xs font-medium text-white/50'>
+            <span className='text-xs font-medium text-foreground/60 dark:text-white/50'>
               &copy; 2026 - {new Date().getFullYear()} Afro UI
             </span>
           </div>
