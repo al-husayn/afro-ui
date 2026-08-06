@@ -48,7 +48,8 @@ const SparkleIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const pill = "rounded-full border-apple bg-neutral-900";
+const pill =
+  "rounded-full border border-white/10 bg-[#0b1410]/90 shadow-[0_12px_30px_-16px_rgba(0,0,0,0.45)] backdrop-blur-xl";
 
 export default function GooeyNavbar({ stars }: { stars?: number | null }) {
   const pathname = usePathname();
@@ -125,7 +126,7 @@ export default function GooeyNavbar({ stars }: { stars?: number | null }) {
               height={20}
               className="h-5 w-5"
             />
-            <span className="font-runde text-md font-semibold text-white">
+            <span className="font-runde text-[0.95rem] font-semibold tracking-[0.02em] text-white">
               Afro UI
             </span>
           </Link>
@@ -148,7 +149,7 @@ export default function GooeyNavbar({ stars }: { stars?: number | null }) {
                   "px-3.5 text-sm",
                   pathname === link.href
                     ? "text-white"
-                    : "text-white/60 transition-colors duration-150 ease-out hover:text-white",
+                    : "text-white/65 transition-colors duration-150 ease-out hover:text-white",
                 )}
               >
                 {link.label}
@@ -173,7 +174,7 @@ export default function GooeyNavbar({ stars }: { stars?: number | null }) {
             onBlur={() => setStarHovered(false)}
             className={cn(
               pill,
-              "flex h-12 items-center transition-colors duration-200 ease-out hover:bg-neutral-800",
+              "flex h-12 items-center transition-colors duration-200 ease-out hover:bg-white/10",
             )}
           >
             <span className="relative flex h-12 w-12 items-center justify-center">
@@ -265,7 +266,7 @@ export default function GooeyNavbar({ stars }: { stars?: number | null }) {
           <ThemeToggle
             className={cn(
               pill,
-              "flex h-12 w-12 items-center justify-center p-0 text-white/80 hover:bg-neutral-800 hover:text-white [&_svg]:h-6 [&_svg]:w-6",
+              "flex h-12 w-12 items-center justify-center p-0 text-white/80 hover:bg-white/10 hover:text-white [&_svg]:h-6 [&_svg]:w-6",
             )}
           />
         </motion.div>

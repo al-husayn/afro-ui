@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { REGISTRY_REPO, PANEL_INFO } from "@/lib/components";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Introduction",
@@ -87,12 +88,12 @@ export default function IntroductionPage() {
             <p className="text-sm leading-relaxed text-foreground/70">
               Replace <InlineCode>scroll-progress</InlineCode> with any slug
               from the{" "}
-              <a
+              <Link
                 href="/components/installing"
                 className="text-foreground/90 underline underline-offset-4 transition-opacity hover:opacity-70"
               >
                 Installing
-              </a>{" "}
+              </Link>{" "}
               page.
             </p>
           </div>

@@ -54,17 +54,20 @@ const openRunde = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Afro UI — Best Animated React Components",
+    default:
+      "Clean Code. Deep Roots. The UI library that speaks fluent African tech",
     template: "%s | Afro UI",
   },
-  description: "A shadcn registry of best animated React components.",
+  description:
+    "No npm installs. Just copy, paste, and ship faster with high-performance components styled for the next generation of African digital products.",
   keywords: SITE_KEYWORDS,
   icons: {
     icon: [{ url: "/logos/AfroUI.svg", type: "image/svg+xml" }],
   },
   openGraph: {
     title: "Afro UI",
-    description: "A shadcn registry of best animated React components.",
+    description:
+      "Copy-paste React, Next.js, and Tailwind CSS UI components for teams in Africa, Ghana, and beyond, built on top of shadcn.",
     url: "/",
     siteName: "Afro UI",
     images: [
@@ -80,7 +83,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Afro UI",
-    description: "A shadcn registry of best animated React components.",
+    description:
+      "Copy-paste React, Next.js, and Tailwind CSS UI components for teams in Africa, Ghana, and beyond, built on top of shadcn.",
     images: ["/ogimage.png"],
   },
 };

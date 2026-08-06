@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+// import Image from 'next/image';
 import GooeyNavbar from "@/components/GooeyNavbar";
 import { fetchStarCount } from "@/lib/github";
 import HeroCta from "@/components/HeroCta";
@@ -20,27 +20,30 @@ export default async function Home() {
     <>
       <section className="relative w-full p-1.5 md:p-2.5">
         <HeroWrapper>
-          <Image
-            src="/assets/landing/herobg.webp"
-            alt="Hero Background"
-            aria-hidden="true"
+          {/* <Image
+            src='/assets/landing/herobg.webp'
+            alt='Hero Background'
+            aria-hidden='true'
             fill
             priority
-            sizes="100vw"
-            className="pointer-events-none absolute inset-0 size-full rounded-[inherit] object-cover"
-          />
+            sizes='100vw'
+            className='pointer-events-none absolute inset-0 size-full rounded-[inherit] object-cover'
+          /> */}
           <div className="pointer-events-none absolute inset-0 rounded-[inherit] bg-linear-to-t from-background from-6% to-transparent" />
           <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center gap-3 px-4 pb-12 pt-24 text-center sm:gap-4 sm:px-6 md:pb-16">
             <div>
               <GooeyNavbar stars={stars} />
             </div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-primary dark:border-primary/30 dark:bg-primary/15">
+              Built for modern African teams
+            </div>
             <h1 className="max-w-4xl text-balance font-runde text-black text-4xl font-bold tracking-tight dark:text-white sm:text-4xl md:text-6xl lg:text-7xl">
-              Components Designed to Stand Out.
+              The UI library that speaks fluent African tech.
             </h1>
             <p className="max-w-xl font-medium text-black/80 dark:text-white/80 sm:text-sm">
-              A curated collection of distinctive, animated UI components built
-              for modern interfaces. Explore live previews and install any
-              component instantly with the shadcn CLI.
+              No npm installs. Just copy, paste, and ship faster with
+              high-performance components styled for the next generation of
+              African digital products
             </p>
             <HeroCta />
             <HomeDemos />
@@ -68,12 +71,11 @@ function DemoSection() {
         Work in progress
       </span>
       <h2 className="max-w-2xl text-balance font-runde text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-        Afro UI is built in public
+        Afro UI is being shaped in public
       </h2>
       <p className="max-w-xl text-balance font-medium text-muted-foreground sm:text-lg">
-        The landing page is still evolving, with new components and improvements
-        shipping regularly. Follow the journey on X and star the project on
-        GitHub to stay updated.
+        New components and ideas are landing regularly as the library grows for
+        modern teams building on the web across Africa and beyond.
       </p>
       <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
         <a
@@ -97,7 +99,7 @@ function DemoSection() {
           href={GITHUB_URL}
           target="_blank"
           rel="noreferrer"
-          className="flex h-12 items-center gap-2.5 rounded-full border border-border bg-card px-6 text-sm font-semibold transition-colors duration-150 ease-out hover:bg-muted"
+          className="flex h-12 items-center gap-2.5 rounded-full border border-primary/20 bg-card px-6 text-sm font-semibold text-foreground transition-colors duration-150 ease-out hover:bg-primary/10"
         >
           <svg
             viewBox="0 0 24 24"

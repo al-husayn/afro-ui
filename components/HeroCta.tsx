@@ -64,16 +64,18 @@ export default function HeroCta() {
       >
         <StretchSquircleBg
           hovered={hovered === "pill"}
-          bgClassName="bg-neutral-900"
+          bgClassName="bg-primary"
         />
         <CopyButton
           value={INSTALL_COMMAND}
           label="Copy command"
-          className="relative h-12 max-w-full flex-row-reverse gap-2 pl-4 pr-4 text-white/50 hover:text-white sm:pl-5"
+          className="relative h-12 max-w-full flex-row-reverse gap-2 pl-4 pr-4 text-primary-foreground/70 hover:text-primary-foreground sm:pl-5"
         >
-          <code className="overflow-x-auto whitespace-nowrap font-mono text-xs font-semibold text-white sm:text-sm">
+          <code className="overflow-x-auto whitespace-nowrap font-mono text-xs font-semibold text-primary-foreground sm:text-sm">
             Install
-            <span className="font-normal text-white/50">/otp-input</span>
+            <span className="font-normal text-primary-foreground/70">
+              /otp-input
+            </span>
           </code>
         </CopyButton>
       </motion.div>
@@ -88,11 +90,11 @@ export default function HeroCta() {
       >
         <StretchSquircleBg
           hovered={hovered === "cta"}
-          bgClassName="bg-[#fcd601] transition-colors duration-150 ease-out group-hover:bg-[#f3cb00]"
+          bgClassName="bg-accent transition-colors duration-150 ease-out group-hover:bg-[#f59e0b]"
         />
         <Link
           href="/components"
-          className="relative flex h-12 items-center px-6 text-sm font-semibold font-rund text-black transition-colors duration-150 ease-out hover:text-white"
+          className="relative flex h-12 items-center px-6 text-sm font-semibold font-rund text-accent-foreground transition-colors duration-150 ease-out hover:text-accent-foreground"
         >
           Explore
         </Link>
