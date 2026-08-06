@@ -1,4 +1,3 @@
-
 import { componentPageMetadata } from "@/lib/seo";
 import Demo from "./demo";
 

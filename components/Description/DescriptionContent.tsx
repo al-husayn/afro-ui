@@ -32,7 +32,6 @@ export default function DescriptionContent({
 }: DescriptionContentProps) {
   return (
     <div className={cn("flex flex-col gap-12 text-left", className)}>
-
       {/* always-visible header */}
       <div className="flex flex-col gap-4">
         <SectionLabel>{item?.name ?? "Component"}</SectionLabel>
@@ -148,7 +147,6 @@ export default function DescriptionContent({
           ))}
         </ul>
       </DocSection>
-
     </div>
   );
 }

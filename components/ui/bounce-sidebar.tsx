@@ -1,6 +1,12 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef, useState, type ComponentProps } from "react";
+import {
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+  type ComponentProps,
+} from "react";
 import Link from "next/link";
 import { motion, useAnimate } from "motion/react";
 import { arc } from "motion";

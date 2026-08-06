@@ -51,7 +51,7 @@ export default function YoutubeEmbed({
       data-slot="youtube-embed"
       className={cn(
         "relative w-full overflow-hidden rounded-xl border border-black/10 dark:border-white/10",
-        className
+        className,
       )}
       style={{
         aspectRatio,
@@ -70,7 +70,7 @@ export default function YoutubeEmbed({
         title="YouTube video"
         className={cn(
           "absolute inset-0 h-full w-full pointer-events-none",
-          iframeClassName
+          iframeClassName,
         )}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"

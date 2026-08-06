@@ -11,12 +11,11 @@ export default function InstallingPage() {
     <div className="no-scrollbar h-full overflow-y-auto">
       <div className="mx-auto max-w-xl px-8 pb-24 pt-20">
         <div className="flex flex-col gap-12">
-
           <div className="flex flex-col gap-4">
             <SectionLabel>Installation</SectionLabel>
             <p className="text-2xl font-semibold leading-relaxed font-sans text-foreground/90">
-              Add components to your project in one command. Source files
-              land in your codebase with no package lock-in.
+              Add components to your project in one command. Source files land
+              in your codebase with no package lock-in.
             </p>
           </div>
 
@@ -74,7 +73,6 @@ export default function InstallingPage() {
                 ))}
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -83,9 +81,18 @@ export default function InstallingPage() {
 
 const PM_VARIANTS = [
   { label: "npm", command: `npx shadcn add ${REGISTRY_REPO}/scroll-progress` },
-  { label: "pnpm", command: `pnpm dlx shadcn add ${REGISTRY_REPO}/scroll-progress` },
-  { label: "yarn", command: `yarn dlx shadcn add ${REGISTRY_REPO}/scroll-progress` },
-  { label: "bun", command: `bunx --bun shadcn add ${REGISTRY_REPO}/scroll-progress` },
+  {
+    label: "pnpm",
+    command: `pnpm dlx shadcn add ${REGISTRY_REPO}/scroll-progress`,
+  },
+  {
+    label: "yarn",
+    command: `yarn dlx shadcn add ${REGISTRY_REPO}/scroll-progress`,
+  },
+  {
+    label: "bun",
+    command: `bunx --bun shadcn add ${REGISTRY_REPO}/scroll-progress`,
+  },
 ];
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

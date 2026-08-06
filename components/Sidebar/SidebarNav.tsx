@@ -9,7 +9,11 @@ const NAV_ITEMS = [
   { label: "Installing", href: "/components/installing" },
 ] as const;
 
-export default function SidebarNav({ onNavigate }: { onNavigate?: () => void }) {
+export default function SidebarNav({
+  onNavigate,
+}: {
+  onNavigate?: () => void;
+}) {
   const pathname = usePathname();
 
   return (
@@ -23,7 +27,9 @@ export default function SidebarNav({ onNavigate }: { onNavigate?: () => void }) 
             onClick={onNavigate}
             className={cn(
               "rounded-lg p-1 text-sm transition-colors duration-200",
-              isActive ? "text-foreground" : "text-foreground/50 hover:text-foreground",
+              isActive
+                ? "text-foreground"
+                : "text-foreground/50 hover:text-foreground",
             )}
           >
             {label}

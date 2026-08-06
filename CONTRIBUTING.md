@@ -35,7 +35,7 @@ Conventions:
 - Export named exports, not default exports:
 
 ```tsx
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
 function GlowBadge({
   className,
@@ -44,7 +44,7 @@ function GlowBadge({
   return (
     <span
       className={cn(
-        'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs',
+        "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs",
         className,
       )}
       {...props}
@@ -96,7 +96,7 @@ Field reference:
 Add a section to `app/page.tsx` so the component is visible on the demo site:
 
 ```tsx
-<ComponentSection name='Glow Badge' description='A badge with a soft glow.'>
+<ComponentSection name="Glow Badge" description="A badge with a soft glow.">
   <GlowBadge>New</GlowBadge>
 </ComponentSection>
 ```

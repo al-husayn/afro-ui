@@ -50,9 +50,7 @@ function getRevealOrder(text: string[], direction: RevealDirection) {
   if (direction === "center") {
     const center = (text.length - 1) / 2;
 
-    return indices.sort(
-      (a, b) => Math.abs(a - center) - Math.abs(b - center),
-    );
+    return indices.sort((a, b) => Math.abs(a - center) - Math.abs(b - center));
   }
 
   return indices;

@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
-import { motion, stagger, type Variants } from 'motion/react';
-import { BounceSidebar } from '@/components/ui/bounce-sidebar';
+import { useEffect, useRef, useState } from "react";
+import { motion, stagger, type Variants } from "motion/react";
+import { BounceSidebar } from "@/components/ui/bounce-sidebar";
 
 const STEP = 0.04;
 const getDelay = stagger(STEP, { startDelay: 0.05 });
@@ -15,56 +15,56 @@ const fadeUp: Variants = {
     transition: {
       delay: getDelay(order, TOTAL),
       duration: 0.35,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   }),
 };
 
 const LOREM_A =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
 const LOREM_B =
-  'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+  "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
 const LOREM_C =
-  'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.';
+  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.";
 
 const sections = [
   {
-    title: 'Introduction',
+    title: "Introduction",
     blocks: [
       { text: LOREM_A },
-      { heading: 'Background', text: LOREM_B },
-      { heading: 'Etymology', text: LOREM_C },
+      { heading: "Background", text: LOREM_B },
+      { heading: "Etymology", text: LOREM_C },
     ],
   },
   {
-    title: 'History',
+    title: "History",
     blocks: [
       { text: LOREM_C },
-      { heading: 'Early period', text: LOREM_A },
-      { heading: 'Modern era', text: LOREM_B },
+      { heading: "Early period", text: LOREM_A },
+      { heading: "Modern era", text: LOREM_B },
     ],
   },
   {
-    title: 'Overview',
+    title: "Overview",
     blocks: [
       { text: LOREM_B },
-      { heading: 'Principles', text: LOREM_C },
-      { heading: 'Structure', text: LOREM_A },
+      { heading: "Principles", text: LOREM_C },
+      { heading: "Structure", text: LOREM_A },
     ],
   },
   {
-    title: 'Architecture',
+    title: "Architecture",
     blocks: [
       { text: LOREM_A },
-      { heading: 'Components', text: LOREM_B },
-      { heading: 'Data flow', text: LOREM_C },
+      { heading: "Components", text: LOREM_B },
+      { heading: "Data flow", text: LOREM_C },
     ],
   },
   {
-    title: 'References',
-    blocks: [{ text: LOREM_C }, { heading: 'Further reading', text: LOREM_A }],
+    title: "References",
+    blocks: [{ text: LOREM_C }, { heading: "Further reading", text: LOREM_A }],
   },
 ];
 
@@ -86,7 +86,7 @@ export default function BounceSidebarPage() {
       el.getBoundingClientRect().top -
       container.getBoundingClientRect().top +
       container.scrollTop;
-    container.scrollTo({ top: top - 8, behavior: 'smooth' });
+    container.scrollTo({ top: top - 8, behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -109,43 +109,47 @@ export default function BounceSidebarPage() {
       });
       setActive(current);
     };
-    container.addEventListener('scroll', onScroll, { passive: true });
-    return () => container.removeEventListener('scroll', onScroll);
+    container.addEventListener("scroll", onScroll, { passive: true });
+    return () => container.removeEventListener("scroll", onScroll);
   }, []);
 
   let order = 0;
 
   return (
-    <div className='flex h-full gap-10 overflow-hidden p-6'>
-      <aside className='w-52 shrink-0'>
-        <p className='mb-3 pl-2 mt-2 text-sm font-medium font-sans uppercase tracking-wide text-foreground'>
+    <div className="flex h-full gap-10 overflow-hidden p-6">
+      <aside className="w-52 shrink-0">
+        <p className="mb-3 pl-2 mt-2 text-sm font-medium font-sans uppercase tracking-wide text-foreground">
           Contents
         </p>
         <BounceSidebar
           items={sections.map((s) => s.title)}
           value={active}
           onChange={goTo}
-          dotColor='#fcd601'
+          dotColor="#fcd601"
         />
       </aside>
 
       <div
         ref={scrollRef}
-        className='min-h-0 flex-1 overflow-auto scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden'>
+        className="min-h-0 flex-1 overflow-auto scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+      >
         <motion.article
-          className='max-w-2xl'
-          initial='hidden'
-          animate='visible'>
+          className="max-w-2xl"
+          initial="hidden"
+          animate="visible"
+        >
           <motion.h1
             variants={fadeUp}
             custom={order++}
-            className='text-5xl font-medium tracking-wider font-cal text-foreground'>
+            className="text-5xl font-medium tracking-wider font-cal text-foreground"
+          >
             Afro UI
           </motion.h1>
           <motion.p
             variants={fadeUp}
             custom={order++}
-            className='mt-2 text-lg text-foreground/40'>
+            className="mt-2 text-lg text-foreground/40"
+          >
             From Afro UI, the free component encyclopedia
           </motion.p>
 
@@ -155,11 +159,13 @@ export default function BounceSidebarPage() {
               ref={(el) => {
                 sectionRefs.current[index] = el;
               }}
-              className='mt-10'>
+              className="mt-10"
+            >
               <motion.h2
                 variants={fadeUp}
                 custom={order++}
-                className='border-b pb-2 font-cal tracking-wide text-3xl font-medium text-foreground/90'>
+                className="border-b pb-2 font-cal tracking-wide text-3xl font-medium text-foreground/90"
+              >
                 {section.title}
               </motion.h2>
 
@@ -168,13 +174,14 @@ export default function BounceSidebarPage() {
                   key={blockIndex}
                   variants={fadeUp}
                   custom={order++}
-                  className='mt-6'>
-                  {'heading' in block && block.heading && (
-                    <h3 className='text-lg font-cal tracking-wide font-normal text-foreground/80'>
+                  className="mt-6"
+                >
+                  {"heading" in block && block.heading && (
+                    <h3 className="text-lg font-cal tracking-wide font-normal text-foreground/80">
                       {block.heading}
                     </h3>
                   )}
-                  <p className='mt-3 font-sans text-sm leading-6 text-foreground/40'>
+                  <p className="mt-3 font-sans text-sm leading-6 text-foreground/40">
                     {block.text}
                   </p>
                 </motion.div>

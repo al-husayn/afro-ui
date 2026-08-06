@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, {
   useCallback,
@@ -6,7 +6,7 @@ import React, {
   useMemo,
   useRef,
   useState,
-} from 'react';
+} from "react";
 import {
   motion,
   useMotionValue,
@@ -14,10 +14,10 @@ import {
   useSpring,
   useTransform,
   type MotionValue,
-} from 'motion/react';
+} from "motion/react";
 
-type Side = 'left' | 'right';
-type SectionKind = 'title' | 'subtitle' | 'section' | 'body';
+type Side = "left" | "right";
+type SectionKind = "title" | "subtitle" | "section" | "body";
 type SectionLevel = 1 | 2 | 3 | 4 | 5 | 6;
 
 export type ProximitySection = {
@@ -60,49 +60,49 @@ const DASH_PRESETS: Record<SectionKind, DashPreset> = {
     base: 40,
     bump: 70,
     thickness: 1,
-    className: 'bg-foreground',
+    className: "bg-foreground",
   },
   subtitle: {
     base: 36,
     bump: 64,
     thickness: 1,
-    className: 'bg-foreground',
+    className: "bg-foreground",
   },
   section: {
     base: 30,
     bump: 56,
     thickness: 1,
-    className: 'bg-muted-foreground/40',
+    className: "bg-muted-foreground/40",
   },
   body: {
     base: 24,
     bump: 50,
     thickness: 1,
-    className: 'bg-muted-foreground/40',
+    className: "bg-muted-foreground/40",
   },
 };
 
 const getSectionElement = (id: string) =>
-  typeof document === 'undefined' ? null : document.getElementById(id);
+  typeof document === "undefined" ? null : document.getElementById(id);
 
 const getSectionKind = (section: ProximitySection): SectionKind => {
   if (section.kind) return section.kind;
-  if (section.level === 1) return 'title';
-  if (section.level === 2) return 'subtitle';
-  if (section.level === 3) return 'section';
-  return 'body';
+  if (section.level === 1) return "title";
+  if (section.level === 2) return "subtitle";
+  if (section.level === 3) return "section";
+  return "body";
 };
 
 const getElementSectionKind = (id: string): SectionKind | undefined => {
   const heading = getSectionElement(id)?.querySelector(
-    'h1, h2, h3, h4, h5, h6',
+    "h1, h2, h3, h4, h5, h6",
   );
   const tagName = heading?.tagName.toLowerCase();
 
-  if (tagName === 'h1') return 'title';
-  if (tagName === 'h2') return 'subtitle';
-  if (tagName === 'h3') return 'section';
-  if (tagName) return 'body';
+  if (tagName === "h1") return "title";
+  if (tagName === "h2") return "subtitle";
+  if (tagName === "h3") return "section";
+  if (tagName) return "body";
 };
 
 const getScrollParent = (element: HTMLElement) => {
@@ -165,18 +165,19 @@ const Dash = ({
   return (
     <button
       ref={ref}
-      type='button'
-      aria-current={active ? 'location' : undefined}
+      type="button"
+      aria-current={active ? "location" : undefined}
       aria-label={`Go to ${section.label}`}
       title={section.label}
-      className='group flex h-px w-[110px] items-center border-0 bg-transparent p-0 outline-none'
-      onClick={() => onSelect(section.id)}>
+      className="group flex h-px w-[110px] items-center border-0 bg-transparent p-0 outline-none"
+      onClick={() => onSelect(section.id)}
+    >
       <motion.span
         className={`block transition-colors duration-150 ease-out group-focus-visible:ring-2 group-focus-visible:ring-ring group-focus-visible:ring-offset-2 ${preset.className}`}
         style={{
           height: preset.thickness,
           scaleX,
-          transformOrigin: side === 'left' ? 'left center' : 'right center',
+          transformOrigin: side === "left" ? "left center" : "right center",
           width: MAX_DASH_WIDTH,
         }}
       />
@@ -186,8 +187,8 @@ const Dash = ({
 
 const ProximitySidebar = ({
   activeOffset = 0.4,
-  className = '',
-  side = 'left',
+  className = "",
+  side = "left",
   sections,
 }: ProximitySidebarProps) => {
   const mouseY = useMotionValue(Infinity);
@@ -198,7 +199,7 @@ const ProximitySidebar = ({
   const [activeId, setActiveId] = useState(sections[0]?.id);
 
   const sectionIds = useMemo(
-    () => sections.map((section) => section.id).join('|'),
+    () => sections.map((section) => section.id).join("|"),
     [sections],
   );
 
@@ -258,11 +259,11 @@ const ProximitySidebar = ({
       if (!element) return;
 
       element.scrollIntoView({
-        behavior: shouldReduceMotion ? 'auto' : 'smooth',
-        block: 'start',
+        behavior: shouldReduceMotion ? "auto" : "smooth",
+        block: "start",
       });
 
-      window.history.replaceState(null, '', `#${id}`);
+      window.history.replaceState(null, "", `#${id}`);
       setActiveId(id);
       pulseDash(id);
     },
@@ -337,31 +338,32 @@ const ProximitySidebar = ({
     updateActiveSection();
 
     for (const parent of scrollParents) {
-      parent.addEventListener('scroll', scheduleUpdate, { passive: true });
+      parent.addEventListener("scroll", scheduleUpdate, { passive: true });
     }
 
-    window.addEventListener('resize', scheduleUpdate);
+    window.addEventListener("resize", scheduleUpdate);
 
     return () => {
       if (frame) window.cancelAnimationFrame(frame);
 
       for (const parent of scrollParents) {
-        parent.removeEventListener('scroll', scheduleUpdate);
+        parent.removeEventListener("scroll", scheduleUpdate);
       }
 
-      window.removeEventListener('resize', scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
     };
   }, [activeOffset, pulseDash, sectionIds, sections]);
 
   return (
     <nav
-      aria-label='Page sections'
+      aria-label="Page sections"
       className={`flex h-full min-h-0 items-center ${
-        side === 'left' ? 'justify-start' : 'justify-end'
-      } ${className}`}>
+        side === "left" ? "justify-start" : "justify-end"
+      } ${className}`}
+    >
       <div
         className={`new-home_minimap__dDggR mx-8 flex flex-col ${
-          side === 'right' ? 'items-end' : 'items-start'
+          side === "right" ? "items-end" : "items-start"
         }`}
         style={{ gap: 8 }}
         onPointerMove={(event) => {
@@ -372,7 +374,8 @@ const ProximitySidebar = ({
         onPointerLeave={() => {
           pointerInside.current = false;
           mouseY.set(Infinity);
-        }}>
+        }}
+      >
         {sections.map((section) => (
           <Dash
             key={section.id}

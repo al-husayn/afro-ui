@@ -31,9 +31,8 @@ type MagneticDockContextValue = {
   pointerInsideRef: React.MutableRefObject<boolean>;
 };
 
-const MagneticDockContext = React.createContext<MagneticDockContextValue | null>(
-  null,
-);
+const MagneticDockContext =
+  React.createContext<MagneticDockContextValue | null>(null);
 
 function useMagneticDockContext() {
   const context = React.useContext(MagneticDockContext);
@@ -255,15 +254,21 @@ const MagneticDockItem = React.forwardRef<
         disabled && "pointer-events-none opacity-45",
         className,
       ),
-      onFocus: (event: React.FocusEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+      onFocus: (
+        event: React.FocusEvent<HTMLButtonElement | HTMLAnchorElement>,
+      ) => {
         focusItem();
         onFocus?.(event as React.FocusEvent<HTMLButtonElement>);
       },
-      onBlur: (event: React.FocusEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+      onBlur: (
+        event: React.FocusEvent<HTMLButtonElement | HTMLAnchorElement>,
+      ) => {
         blurItem();
         onBlur?.(event as React.FocusEvent<HTMLButtonElement>);
       },
-      onClick: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+      onClick: (
+        event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+      ) => {
         onClick?.(event as React.MouseEvent<HTMLButtonElement>);
       },
       children: (
@@ -309,12 +314,7 @@ const MagneticDockItem = React.forwardRef<
             rel={external ? "noreferrer" : undefined}
           />
         ) : (
-          <button
-            {...props}
-            {...sharedProps}
-            type={type}
-            disabled={disabled}
-          />
+          <button {...props} {...sharedProps} type={type} disabled={disabled} />
         )}
 
         {active ? (

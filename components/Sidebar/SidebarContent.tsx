@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 const GETTING_STARTED = [
   { label: "Home", href: "/" },
   { label: "Introduction", href: "/components/introduction" },
-  { label: "Installing",   href: "/components/installing" },
+  { label: "Installing", href: "/components/installing" },
 ] as const;
 
 // ─── shared primitives ───────────────────────────────────────────────────────
@@ -33,7 +33,9 @@ function GroupHeader({
       onClick={onToggle}
       className={cn(
         "flex w-full items-center justify-between rounded-lg px-1 py-1.5 text-left transition-colors duration-200",
-        isGroupActive ? "text-foreground" : "text-foreground/50 hover:text-foreground",
+        isGroupActive
+          ? "text-foreground"
+          : "text-foreground/50 hover:text-foreground",
       )}
     >
       <span className="text-sm font-semibold">{label}</span>
@@ -75,7 +77,9 @@ function NavItem({
         onClick={onClick}
         className={cn(
           "w-full rounded-lg py-1 pl-4 pr-1 text-sm transition-colors duration-200",
-          isActive ? "text-foreground" : "text-foreground/50 hover:text-foreground",
+          isActive
+            ? "text-foreground"
+            : "text-foreground/50 hover:text-foreground",
         )}
       >
         {label}
@@ -114,9 +118,7 @@ function CollapsibleGroup({
             transition={{ duration: 0.22, ease: "easeOut" }}
             className="overflow-hidden"
           >
-            <div className="flex flex-col gap-0.5 pb-1 pt-0.5">
-              {children}
-            </div>
+            <div className="flex flex-col gap-0.5 pb-1 pt-0.5">{children}</div>
           </motion.ul>
         )}
       </AnimatePresence>
@@ -126,15 +128,24 @@ function CollapsibleGroup({
 
 // ─── main export ─────────────────────────────────────────────────────────────
 
-export default function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
+export default function SidebarContent({
+  onNavigate,
+}: {
+  onNavigate?: () => void;
+}) {
   const pathname = usePathname();
 
-  const isGettingStartedActive = GETTING_STARTED.some((i) => i.href === pathname);
+  const isGettingStartedActive = GETTING_STARTED.some(
+    (i) => i.href === pathname,
+  );
   const isComponentsActive = components.some((c) => c.href === pathname);
 
   return (
     <nav className="flex flex-col gap-4 px-2">
-      <CollapsibleGroup label="Getting Started" isGroupActive={isGettingStartedActive}>
+      <CollapsibleGroup
+        label="Getting Started"
+        isGroupActive={isGettingStartedActive}
+      >
         {GETTING_STARTED.map(({ label, href }) => (
           <NavItem
             key={href}

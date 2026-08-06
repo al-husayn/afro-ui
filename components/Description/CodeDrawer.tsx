@@ -60,7 +60,7 @@ export default function CodeDrawer({ open, onClose, item }: CodeDrawerProps) {
       </div>
 
       <PanelCode
-        code={loading ? SOURCE_LOADING : code ?? ""}
+        code={loading ? SOURCE_LOADING : (code ?? "")}
         showLineNumbers
         className="mx-4 mb-4 min-h-0 flex-1"
       />

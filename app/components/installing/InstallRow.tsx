@@ -1,7 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { REGISTRY_REPO, PACKAGE_MANAGERS, type PackageManager } from "@/lib/components";
+import {
+  REGISTRY_REPO,
+  PACKAGE_MANAGERS,
+  type PackageManager,
+} from "@/lib/components";
 import { LOGOS } from "@/components/logos";
 import CopyButton from "@/components/CopyButton";
 import Tooltip from "@/components/Tooltip";
@@ -27,7 +31,11 @@ type InstallRowProps = {
   registry: string;
 };
 
-export default function InstallRow({ name, description, registry }: InstallRowProps) {
+export default function InstallRow({
+  name,
+  description,
+  registry,
+}: InstallRowProps) {
   const [pm, setPm] = useState<PackageManager>("npm");
   const command = `${PM_EXECUTORS[pm]} shadcn add ${REGISTRY_REPO}/${registry}`;
 
@@ -35,7 +43,9 @@ export default function InstallRow({ name, description, registry }: InstallRowPr
     <div className="flex flex-col gap-2 rounded-xl border border-border/50 bg-muted/40 p-3">
       <div className="flex flex-col gap-0.5">
         <span className="text-sm font-medium text-foreground/80">{name}</span>
-        <span className="text-xs leading-relaxed text-foreground/50">{description}</span>
+        <span className="text-xs leading-relaxed text-foreground/50">
+          {description}
+        </span>
       </div>
 
       <div className="flex items-center gap-1">
@@ -50,7 +60,9 @@ export default function InstallRow({ name, description, registry }: InstallRowPr
               style={active ? { color: ACTIVE_COLOR[manager] } : undefined}
               className={cn(
                 "flex cursor-pointer items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-colors",
-                active ? "bg-background/60" : "text-foreground/40 hover:text-foreground/70",
+                active
+                  ? "bg-background/60"
+                  : "text-foreground/40 hover:text-foreground/70",
               )}
             >
               <Logo className="size-3" />

@@ -39,7 +39,6 @@ type CopyButtonProps = Omit<ComponentProps<"button">, "value"> & {
   children?: ReactNode;
 };
 
-
 export default function CopyButton({
   value,
   label = "Copy",

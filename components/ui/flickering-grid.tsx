@@ -151,7 +151,10 @@ const FlickeringGrid = React.forwardRef<HTMLDivElement, FlickeringGridProps>(
       };
 
       const createGrid = () => {
-        const nextWidth = Math.max(0, Math.round(width ?? container.clientWidth));
+        const nextWidth = Math.max(
+          0,
+          Math.round(width ?? container.clientWidth),
+        );
         const nextHeight = Math.max(
           0,
           Math.round(height ?? container.clientHeight),

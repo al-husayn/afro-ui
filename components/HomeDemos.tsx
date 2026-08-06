@@ -2,19 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import {
-  AppWindow,
-  Folder,
-  Mail,
-  MessageCircle,
-  Settings,
-} from "lucide-react";
+import { AppWindow, Folder, Mail, MessageCircle, Settings } from "lucide-react";
 import OtpInput from "@/components/ui/otp-input";
 import { TextScramble } from "@/components/ui/text-scramble";
-import {
-  MagneticDock,
-  MagneticDockItem,
-} from "@/components/ui/magnetic-dock";
+import { MagneticDock, MagneticDockItem } from "@/components/ui/magnetic-dock";
 
 const DEMOS = [
   {
