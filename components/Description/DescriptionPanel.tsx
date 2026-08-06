@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
 import { CodeXml, Maximize, Minimize } from "lucide-react";
@@ -22,9 +22,7 @@ export function DescriptionPanel({ open, setOpen }: DescriptionPanelProps) {
   const item = activeComponent(pathname);
 
   const [codeOpen, setCodeOpen] = useState(false);
-  useEffect(() => {
-    if (!open) setCodeOpen(false);
-  }, [open]);
+
 
   const toggleCode = () => {
     if (codeOpen) {
@@ -77,8 +75,8 @@ export function DescriptionPanel({ open, setOpen }: DescriptionPanelProps) {
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
         className="pointer-events-auto relative flex h-full w-140 flex-col overflow-hidden rounded-2xl bg-background"
       >
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-12 bg-gradient-to-b from-background to-transparent" />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-12 bg-gradient-to-t from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-12 bg-linear-to-b from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-12 bg-linear-to-t from-background to-transparent" />
 
         <div className="no-scrollbar flex flex-1 flex-col overflow-y-auto">
           <DescriptionContent item={item} className="p-8 pt-60" />
