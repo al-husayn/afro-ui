@@ -1,52 +1,52 @@
-import type { Metadata } from "next";
-import { Inter, Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Databuddy } from "@databuddy/sdk/react";
-import { SITE_URL } from "@/lib/site";
-import { SITE_KEYWORDS } from "@/lib/seo";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter, Geist_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
+import { ThemeProvider } from '@/components/theme-provider';
+import { Databuddy } from '@databuddy/sdk/react';
+import { SITE_URL } from '@/lib/site';
+import { SITE_KEYWORDS } from '@/lib/seo';
+import './globals.css';
 
 const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+  variable: '--font-inter',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 const calSans = localFont({
-  src: "../public/fonts/CalSans-SemiBold.woff2",
-  variable: "--font-cal-sans",
-  weight: "600",
-  style: "normal",
-  display: "swap",
+  src: '../public/fonts/CalSans-SemiBold.woff2',
+  variable: '--font-cal-sans',
+  weight: '600',
+  style: 'normal',
+  display: 'swap',
 });
 
 const openRunde = localFont({
-  variable: "--font-open-runde",
+  variable: '--font-open-runde',
   src: [
     {
-      path: "../public/fonts/OpenRunde-Regular.woff2",
-      weight: "400",
-      style: "normal",
+      path: '../public/fonts/OpenRunde-Regular.woff2',
+      weight: '400',
+      style: 'normal',
     },
     {
-      path: "../public/fonts/OpenRunde-Medium.woff2",
-      weight: "500",
-      style: "normal",
+      path: '../public/fonts/OpenRunde-Medium.woff2',
+      weight: '500',
+      style: 'normal',
     },
     {
-      path: "../public/fonts/OpenRunde-Semibold.woff2",
-      weight: "600",
-      style: "normal",
+      path: '../public/fonts/OpenRunde-Semibold.woff2',
+      weight: '600',
+      style: 'normal',
     },
     {
-      path: "../public/fonts/OpenRunde-Bold.woff2",
-      weight: "700",
-      style: "normal",
+      path: '../public/fonts/OpenRunde-Bold.woff2',
+      weight: '700',
+      style: 'normal',
     },
   ],
 });
@@ -54,34 +54,37 @@ const openRunde = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Afro UI — Best Animated React Components",
-    template: "%s | Afro UI",
+    default: 'Afro UI, copy-paste React UI components for Africa',
+    template: '%s | Afro UI',
   },
-  description: "A shadcn registry of best animated React components.",
+  description:
+    'Copy-paste React, Next.js, and Tailwind CSS UI components for teams in Africa, Ghana, and beyond, built on top of shadcn.',
   keywords: SITE_KEYWORDS,
   icons: {
-    icon: [{ url: "/logos/AfroUI.svg", type: "image/svg+xml" }],
+    icon: [{ url: '/logos/AfroUI.svg', type: 'image/svg+xml' }],
   },
   openGraph: {
-    title: "Afro UI",
-    description: "A shadcn registry of best animated React components.",
-    url: "/",
-    siteName: "Afro UI",
+    title: 'Afro UI',
+    description:
+      'Copy-paste React, Next.js, and Tailwind CSS UI components for teams in Africa, Ghana, and beyond, built on top of shadcn.',
+    url: '/',
+    siteName: 'Afro UI',
     images: [
       {
-        url: "/ogimage.png",
+        url: '/ogimage.png',
         width: 1200,
         height: 630,
-        alt: "Afro UI",
+        alt: 'Afro UI',
       },
     ],
-    type: "website",
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Afro UI",
-    description: "A shadcn registry of best animated React components.",
-    images: ["/ogimage.png"],
+    card: 'summary_large_image',
+    title: 'Afro UI',
+    description:
+      'Copy-paste React, Next.js, and Tailwind CSS UI components for teams in Africa, Ghana, and beyond, built on top of shadcn.',
+    images: ['/ogimage.png'],
   },
 };
 
@@ -92,18 +95,16 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang='en'
       suppressHydrationWarning
-      className={`${inter.variable} ${geistMono.variable} ${openRunde.variable} ${calSans.variable} h-full antialiased`}
-    >
-      <body suppressHydrationWarning className="min-h-full flex flex-col">
+      className={`${inter.variable} ${geistMono.variable} ${openRunde.variable} ${calSans.variable} h-full antialiased`}>
+      <body suppressHydrationWarning className='min-h-full flex flex-col'>
         <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
+          attribute='class'
+          defaultTheme='dark'
           enableSystem
-          disableTransitionOnChange
-        >
-          <div className="flex flex-1 flex-col">{children}</div>
+          disableTransitionOnChange>
+          <div className='flex flex-1 flex-col'>{children}</div>
           <Databuddy
             clientId={process.env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID!}
             trackHashChanges={true}
