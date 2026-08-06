@@ -62,8 +62,8 @@ export default function Footer() {
               Afro UI
             </h2>
             <p className='max-w-xl text-balance text-sm font-medium text-foreground/70 dark:text-white/70 sm:text-lg'>
-              A growing library of copy-paste React, Next.js, and Tailwind CSS
-              UI components for modern teams building across Africa and beyond.
+             Build for the Continent. Beautifully crafted React, Next.js, and Tailwind components
+               with a touch of African identity.
             </p>
             <div className='mt-2 flex flex-wrap items-center justify-center gap-3'>
               <Link

@@ -54,11 +54,11 @@ const openRunde = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Afro UI, copy-paste React UI components for Africa',
+    default: 'Clean Code. Deep Roots. The UI library that speaks fluent African tech',
     template: '%s | Afro UI',
   },
   description:
-    'Copy-paste React, Next.js, and Tailwind CSS UI components for teams in Africa, Ghana, and beyond, built on top of shadcn.',
+    'No npm installs. Just copy, paste, and ship faster with high-performance components styled for the next generation of African digital products.',
   keywords: SITE_KEYWORDS,
   icons: {
     icon: [{ url: '/logos/AfroUI.svg', type: 'image/svg+xml' }],

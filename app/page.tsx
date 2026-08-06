@@ -38,12 +38,13 @@ export default async function Home() {
               Built for modern African teams
             </div>
             <h1 className='max-w-4xl text-balance font-runde text-black text-4xl font-bold tracking-tight dark:text-white sm:text-4xl md:text-6xl lg:text-7xl'>
-              Copy, paste, and ship UI components for Africa.
+              The UI library that speaks fluent African
+              tech.
             </h1>
             <p className='max-w-xl font-medium text-black/80 dark:text-white/80 sm:text-sm'>
-              A growing library of copy-paste React, Next.js, and Tailwind CSS
-              components for teams across Africa, Ghana, and beyond, built on
-              top of shadcn.
+              No npm installs. Just copy, paste, and ship faster with
+              high-performance components styled for the next generation of
+              African digital products
             </p>
             <HeroCta />
             <HomeDemos />
