@@ -20,23 +20,13 @@ export default async function Home() {
     <>
       <section className="relative w-full p-1.5 md:p-2.5">
         <HeroWrapper>
-          {/* <Image
-            src='/assets/landing/herobg.webp'
-            alt='Hero Background'
-            aria-hidden='true'
-            fill
-            priority
-            sizes='100vw'
-            className='pointer-events-none absolute inset-0 size-full rounded-[inherit] object-cover'
-          /> */}
+          
           <div className="pointer-events-none absolute inset-0 rounded-[inherit] bg-linear-to-t from-background from-6% to-transparent" />
           <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center gap-3 px-4 pb-12 pt-24 text-center sm:gap-4 sm:px-6 md:pb-16">
             <div>
               <GooeyNavbar stars={stars} />
             </div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-primary dark:border-primary/30 dark:bg-primary/15">
-              Built for modern African teams
-            </div>
+            
             <h1 className="max-w-4xl text-balance font-runde text-black text-4xl font-bold tracking-tight dark:text-white sm:text-4xl md:text-6xl lg:text-7xl">
               The UI library that speaks fluent African tech.
             </h1>
